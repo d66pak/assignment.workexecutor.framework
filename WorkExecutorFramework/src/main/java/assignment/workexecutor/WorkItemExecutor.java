@@ -1,5 +1,7 @@
 package assignment.workexecutor;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * <p>Interface for Work Item Executor that is responsible for executing WorkItems concurrently
  *
@@ -22,4 +24,5 @@ public interface WorkItemExecutor {
      * NOTE: Must be called once the framework is no longer required.
      */
     void shutdown();
+
 }

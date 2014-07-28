@@ -14,7 +14,7 @@ public class TestNumberSquareWorkItem {
     @Test
     public void testNumberSquareWorkItem() {
 
-
+        final long startTime = System.currentTimeMillis();
         List<Integer> numberList = new ArrayList<Integer>(10);
         for (int i = 0; i < 10000; ++i) {
             numberList.add(i);
@@ -26,7 +26,8 @@ public class TestNumberSquareWorkItem {
         wi.execute(10, new WorkItemCompletionCallback() {
             @Override
             public void complete() {
-                System.out.println("NumberSquare WorkItem completed!");
+                System.out.println("NumberSquare WorkItem completed in : "
+                + (System.currentTimeMillis() - startTime));
             }
         });
 

@@ -3,6 +3,7 @@ package assignment.workexecutor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <p>Concrete implementation of WorkItem interface
@@ -37,5 +38,12 @@ public class ParallelWorkItemExecutor implements WorkItemExecutor {
     public void shutdown() {
 
         mExecutorService.shutdown();
+        try {
+            if (!mExecutorService.awaitTermination(60, TimeUnit.SECONDS)) {
+                mExecutorService.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
