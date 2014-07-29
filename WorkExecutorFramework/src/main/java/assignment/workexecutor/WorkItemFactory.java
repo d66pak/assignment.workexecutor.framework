@@ -34,6 +34,7 @@ public class WorkItemFactory {
 
                 workItem = new NumberSquareWorkItem((List<Integer>)taskList);
             }
+            // TODO: Add support for other work items here
         }
 
         return workItem;

@@ -1,7 +1,5 @@
 package assignment.workexecutor;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * <p>Interface for Work Item Executor that is responsible for executing WorkItems concurrently
  *

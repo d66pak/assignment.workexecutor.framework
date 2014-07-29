@@ -1,7 +1,7 @@
 package assignment.workexecutor;
 
 /**
- * Callback interface for indicating that work item execution is completed
+ * Callback interface for indicating that work item execution has completed
  *
  * @author Deepak Telkar
  * Created by dtelkar on 7/28/14.
